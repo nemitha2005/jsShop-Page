@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop • Go Green</title>
+    <link rel="stylesheet" href="styles/globals.css" />
+    <link rel="stylesheet" href="styles/shop.css" />
+    <script type="module" src="components/product-item.js"></script>
+    <script type="module" src="components/basket-item.js"></script>
+    <script src="scripts/shop.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <nav-bar></nav-bar>
+      <div class="shop-container">
+        <div class="shop-wrapper">
+          <div class="shop-content">
+            <h1 class="shop-heading">Shop</h1>
+            <p class="shop-description">
+              Browse our collection of solar panels, inverters, and accessories.
+              Our products are designed to reduce your energy costs and carbon
+              footprint.
+            </p>
+          </div>
+          <div class="products-wrapper"></div>
+          <div class="basket-container">
+            <div class="basket-wrapper">
+              <button
+                id="basket-toggle"
+                class="button basket"
+                variant="primary"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+                  />
+                </svg>
+              </button>
+              <div class="basket-content hidden">
+                <h2 class="basket-heading">
+                  Basket
+                  <button
+                    id="basket-close"
+                    class="button basket-close"
+                    variant="muted"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M6 18 18 6M6 6l12 12"
+                      />
+                    </svg>
+                  </button>
+                </h2>
+                <div class="basket-items"></div>
+                <div class="basket-empty-wrapper">
+                  <p class="basket-empty">Your basket is empty.</p>
+                </div>
+                <div class="basket-total-wrapper">
+                  <p class="basket-total-label">Total</p>
+                  <p class="basket-total">$<span id="basket-total">0.00</span></p>
+                </div>
+                <button
+                  class="button basket-item-checkout-button"
+                  variant="secondary"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="m4.5 12.75 6 6 9-13.5"
+                    />
+                  </svg>
+                  Checkout
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
